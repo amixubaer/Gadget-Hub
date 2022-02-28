@@ -1,3 +1,7 @@
 .search-hover:hover {
   cursor: pointer;
 }
+
+#spinner {
+  display: none;
+}
