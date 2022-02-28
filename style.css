@@ -1,7 +1,35 @@
-.search-hover:hover {
-  cursor: pointer;
+#spinner {
+  position: absolute;
+  color: rgb(23, 38, 121);
+  top: 50%;
+  left: 50%;
+  height: 90px;
+  width: 90px;
+  font-size: 30px;
 }
 
-#spinner {
+.error {
+  position: absolute;
+  top: 30%;
+  width: 100%;
   display: none;
+  justify-content: center;
+}
+.error h1 {
+  font-size: 60px;
+  color: red;
+}
+.card {
+  border-radius: 10px;
+}
+
+.card img {
+  height: auto;
+}
+
+.phones-container {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  column-gap: 10px;
+  row-gap: 10px;
 }
