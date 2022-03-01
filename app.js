@@ -21,6 +21,8 @@ const searchPhones =()=>{
 }
 // all phones
 const allPhones = data => {
+//slice for getting maximum 20 phone
+    const sliceData = data.slice(0,20);
     const phoneContainer = document.getElementById('phone-container');
     phoneContainer.textContent ="";
     if(data.length === 0){
@@ -30,7 +32,7 @@ const allPhones = data => {
         document.getElementById('device').innerText=searchBox.value;
         }
     else{
-        for(phone of data){
+        for(phone of sliceData){
             const div = document.createElement('div');            
             div.innerHTML = `
             <img src="${phone.image}" class="card-img-top" alt="...">
