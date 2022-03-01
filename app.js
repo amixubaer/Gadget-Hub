@@ -64,7 +64,7 @@ const phoneDetails = (data) => {
     let mainFeatures = data.mainFeatures;
     let others = data.others;
     if(data.others == undefined){
-        data.others = "None";
+        data.others = " - ";
     }
     phoneDetailsViewer.innerHTML = `
         
@@ -75,19 +75,21 @@ const phoneDetails = (data) => {
         </div>
         <div class="card-body">
             <h5 class="card-title">Name : ${phoneData.name}</h5>
-            <p class="card-text">Brand : ${phoneData.brand}</p>
-            <p class="card-text">ReleaseDate : ${phoneData.releaseDate}</p>
-            <p class="card-text">DisplaySize : ${mainFeatures.displaySize}</p>
-            <p class="card-text">ChipSet : ${mainFeatures.chipSet}</p>
-            <p class="card-text">Storage : ${mainFeatures.storage}</p>
-            <p class="card-text">Memory : ${mainFeatures.memory}</p>
-            <p class="card-text">Sensors : ${mainFeatures.sensors}</p>
-            <p class="card-text">WLAN : ${others.WLAN}</p>
-            <p class="card-text">Bluetooth : ${others.Bluetooth}</p>
-            <p class="card-text">GPS : ${others.GPS}</p>
-            <p class="card-text">NFC : ${others.NFC}</p>
-            <p class="card-text">Radio : ${others.Radio}</p>
-            <p class="card-text">USB : ${others.USB}</p>
+            <p class="card-text"><b>Brand : </b>${phoneData.brand}</p>
+            <p class="card-text"><b>ReleaseDate : </b>${phoneData.releaseDate ? phoneData.releaseDate : 'Comming Soon'}</p>
+            <p class="card-text"><b>Main Features </b></p>
+            <p class="card-text"><b>DisplaySize : </b>${mainFeatures.displaySize}</p>
+            <p class="card-text"><b>ChipSet : </b>${mainFeatures.chipSet}</p>
+            <p class="card-text"><b>Storage : </b>${mainFeatures.storage}</p>
+            <p class="card-text"><b>Memory : </b>${mainFeatures.memory}</p>
+            <p class="card-text"><b>Sensors : </b>${mainFeatures.sensors}</p>
+            <p class="card-text"><b>Others </b></p>
+           <p class="card-text"><b>WLAN : </b>${phoneData.others.WLAN ? phoneData.others.WLAN : '-'}</p>
+           <p class="card-text"><b>Bluetooth : </b>${phoneData.others.Bluetooth ? phoneData.others.Bluetooth : '-'}</p>
+           <p class="card-text"><b>GPS : </b>${phoneData.others.GPS ? phoneData.others.GPS : '-'}</p>
+           <p class="card-text"><b>NFC : </b>${phoneData.others.NFC ? phoneData.others.NFC : '-'}</p>
+           <p class="card-text"><b>Radio : </b>${phoneData.others.Radio ? phoneData.others.Radio : '-'}</p>
+           <p class="card-text"><b>USB : </b>${phoneData.others.USB ? phoneData.others.USB : '-'}</p>
             </div>
     </div>
     `;}
