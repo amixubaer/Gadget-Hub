@@ -20,11 +20,12 @@
   color: red;
 }
 .card {
+  border: 2px solid black;
   border-radius: 10px;
 }
 
 .card img {
-  height: auto;
+  height: 50%;
 }
 
 .phones-container {
@@ -32,4 +33,22 @@
   grid-template-columns: auto auto auto;
   column-gap: 10px;
   row-gap: 10px;
+}
+
+.phone-detail {
+  width: 100%;
+  height: auto;
+  position: absolute;
+}
+.fulldetail-card {
+  display: grid;
+  grid-template-columns: auto auto;
+  column-gap: 5px;
+}
+
+.close-btn {
+  position: absolute;
+  border-radius: 5px;
+  top: 5;
+  right: 0;
 }
